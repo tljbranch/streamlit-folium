@@ -1,7 +1,7 @@
 {
   "name": "@tljbranch/streamlit_folium",
   "version": "0.3.1",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^9.3.2",
