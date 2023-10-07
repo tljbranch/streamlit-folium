@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Streamlit Folium Component</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Streamlit-folium component" />
+    <script src="./offline_streamlit_folium/leaflet.js"></script>
+    <script src="./offline_streamlit_folium/jquery-1.12.4.min.js"></script>
+    <script src="./offline_streamlit_folium/jquery-2.1.0.min.js"></script>
+    <script src="./offline_streamlit_folium/jquery-ui.min.js"></script>
+    <script src="./offline_streamlit_folium/jquery.min.js"></script>
+    <script src="./offline_streamlit_folium/bootstrap.min.js"></script>
+    <script src="./offline_streamlit_folium/Control.FullScreen.min.js"></script>
+    <script src="./offline_streamlit_folium/Control.Geocoder.js"></script>
+    <script src="./offline_streamlit_folium/Control.MiniMap.js"></script>
+    <script src="./offline_streamlit_folium/d3.min.js"></script>
+    <script src="./offline_streamlit_folium/d3.v4.min.js"></script>
+    <script src="./offline_streamlit_folium/iso8601.min.js"></script>
+    <script src="./offline_streamlit_folium/L.Control.Locate.min.js"></script>
+    <script src="./offline_streamlit_folium/L.Control.MousePosition.min.js"></script>
+    <script src="./offline_streamlit_folium/L.Map.Sync.min.1.js"></script>
+    <script src="./offline_streamlit_folium/L.Map.Sync.min.js"></script>
+    <script src="./offline_streamlit_folium/leaflet-ant-path.min.js"></script>
+    <script src="./offline_streamlit_folium/leaflet-beautify-marker-icon.min.js"></script>
+    <script src="./offline_streamlit_folium/leaflet-dvf.markers.min.js"></script>
+    <script src="./offline_streamlit_folium/leaflet-measure.min.js"></script>
+    <script src="./offline_streamlit_folium/leaflet-search.min.js"></script>
+    <script src="./offline_streamlit_folium/leaflet.awesome-markers.js"></script>
+    <script src="./offline_streamlit_folium/leaflet.boatmarker.min.js"></script>
+    <script src="./offline_streamlit_folium/leaflet.draw.1.js"></script>
+    <script src="./offline_streamlit_folium/leaflet.draw.js"></script>
+    <script src="./offline_streamlit_folium/leaflet.featuregroup.subgroup.js"></script>
+
+    <script src="./offline_streamlit_folium/leaflet.markercluster.js"></script>
+    <script src="./offline_streamlit_folium/leaflet.pattern.js"></script>
+    <script src="./offline_streamlit_folium/leaflet.polylineoffset.min.js"></script>
+    <script src="./offline_streamlit_folium/leaflet.textpath.min.js"></script>
+    <script src="./offline_streamlit_folium/leaflet.timedimension.min.js"></script>
+    <script src="./offline_streamlit_folium/Leaflet.VectorGrid.bundled.js"></script>
+    <script src="./offline_streamlit_folium/leaflet_heat.min.js"></script>
+    <script src="./offline_streamlit_folium/moment.min.js"></script>
+    <script src="./offline_streamlit_folium/pa7_hm.min.js"></script>
+    <script src="./offline_streamlit_folium/pa7_leaflet_hm.min.js"></script>
+    <script src="./offline_streamlit_folium/Semicircle.min.js"></script>
+    <script src="./offline_streamlit_folium/topojson.min.js"></script>
+    <script src="./offline_streamlit_folium/vega.min.js"></script>
+    <script src="./offline_streamlit_folium/leaflet.terminator"></script>
+    <link rel="stylesheet"  href="./offline_streamlit_folium/bootstrap-theme.min.css" />
+    <link rel="stylesheet"  href="./offline_streamlit_folium/bootstrap.min.css" />
+    <link rel="stylesheet"  href="./offline_streamlit_folium/Control.FullScreen.min.css" />
+    <link rel="stylesheet"  href="./offline_streamlit_folium/Control.Geocoder.css" />
+    <link rel="stylesheet"  href="./offline_streamlit_folium/Control.MiniMap.css" />
+    <link rel="stylesheet"  href="./offline_streamlit_folium/default.min.1.css" />
+    <link rel="stylesheet"  href="./offline_streamlit_folium/default.min.css" />
+    <link rel="stylesheet"  href="./offline_streamlit_folium/font-awesome.min.css" />
+    <link rel="stylesheet"  href="./offline_streamlit_folium/L.Control.Locate.min.css" />
+    <link rel="stylesheet"  href="./offline_streamlit_folium/L.Control.MousePosition.min.css" />
+    <link rel="stylesheet"  href="./offline_streamlit_folium/leaflet-beautify-marker-icon.min.css" />
+    <link rel="stylesheet"  href="./offline_streamlit_folium/leaflet-measure.min.css" />
+    <link rel="stylesheet"  href="./offline_streamlit_folium/leaflet-search.min.css" />
+    <link rel="stylesheet"  href="./offline_streamlit_folium/leaflet.awesome-markers.css" />
+    <link rel="stylesheet"  href="./offline_streamlit_folium/leaflet.awesome.rotate.min.css" />
+    <link rel="stylesheet"  href="./offline_streamlit_folium/leaflet.css" />
+    <link rel="stylesheet"  href="./offline_streamlit_folium/leaflet.draw.1.css" />
+    <link rel="stylesheet"  href="./offline_streamlit_folium/leaflet.draw.css" />
+    <link rel="stylesheet"  href="./offline_streamlit_folium/leaflet.timedimension.control.1.css" />
+    <link rel="stylesheet"  href="./offline_streamlit_folium/leaflet.timedimension.control.2.css" />
+    <link rel="stylesheet"  href="./offline_streamlit_folium/leaflet.timedimension.control.css" />
+    <link rel="stylesheet"  href="./offline_streamlit_folium/MarkerCluster.1.css" />
+    <link rel="stylesheet"  href="./offline_streamlit_folium/MarkerCluster.css" />
+    <link rel="stylesheet"  href="./offline_streamlit_folium/MarkerCluster.Default.1.css" />
+    <link rel="stylesheet"  href="./offline_streamlit_folium/MarkerCluster.Default.css" />
+
+
+    <style>
+        .single>:nth-child(1) {
+            width: 100%
+        }
+
+        .single>:nth-child(2) {
+            display: none
+        }
+
+        .double .float-child {
+            width: 50%;
+            float: left
+        }
+    </style>
+</head>
+
+<body><noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+        <div id="parent" class="float-container single">
+            <div class="float-child">
+                <div id="map_div"></div>
+            </div>
+            <div class="float-child">
+                <div id="map_div2"></div>
+            </div>
+        </div>
+    </div><span>&nbsp;</span>
+    <script>!function (e) { function t(t) { for (var n, l, i = t[0], f = t[1], a = t[2], c = 0, s = []; c < i.length; c++)l = i[c], Object.prototype.hasOwnProperty.call(o, l) && o[l] && s.push(o[l][0]), o[l] = 0; for (n in f) Object.prototype.hasOwnProperty.call(f, n) && (e[n] = f[n]); for (p && p(t); s.length;)s.shift()(); return u.push.apply(u, a || []), r() } function r() { for (var e, t = 0; t < u.length; t++) { for (var r = u[t], n = !0, i = 1; i < r.length; i++) { var f = r[i]; 0 !== o[f] && (n = !1) } n && (u.splice(t--, 1), e = l(l.s = r[0])) } return e } var n = {}, o = { 1: 0 }, u = []; function l(t) { if (n[t]) return n[t].exports; var r = n[t] = { i: t, l: !1, exports: {} }; return e[t].call(r.exports, r, r.exports, l), r.l = !0, r.exports } l.m = e, l.c = n, l.d = function (e, t, r) { l.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: r }) }, l.r = function (e) { "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }), Object.defineProperty(e, "__esModule", { value: !0 }) }, l.t = function (e, t) { if (1 & t && (e = l(e)), 8 & t) return e; if (4 & t && "object" == typeof e && e && e.__esModule) return e; var r = Object.create(null); if (l.r(r), Object.defineProperty(r, "default", { enumerable: !0, value: e }), 2 & t && "string" != typeof e) for (var n in e) l.d(r, n, function (t) { return e[t] }.bind(null, n)); return r }, l.n = function (e) { var t = e && e.__esModule ? function () { return e.default } : function () { return e }; return l.d(t, "a", t), t }, l.o = function (e, t) { return Object.prototype.hasOwnProperty.call(e, t) }, l.p = "./"; var i = this.webpackJsonpstreamlit_folium = this.webpackJsonpstreamlit_folium || [], f = i.push.bind(i); i.push = t, i = i.slice(); for (var a = 0; a < i.length; a++)t(i[a]); var p = f; r() }([])</script>
+    <script src="./static/js/2.0c2b0d5c.chunk.js"></script>
+    <script src="./static/js/main.677f6150.chunk.js"></script>
+</body>
+
+</html>

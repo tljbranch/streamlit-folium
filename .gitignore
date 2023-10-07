@@ -7,7 +7,6 @@ __pycache__/
 *$py.class
 
 # Distribution / packaging
-build/
 eggs/
 .eggs/
 *.egg-info/
